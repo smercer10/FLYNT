@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch testbed (Windows)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/bin/",
+            "program": "${workspaceFolder}/bin/testbed.exe",
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Launch testbed (Linux)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/bin/",
+            "program": "${workspaceFolder}/bin/testbed",
+            "externalConsole": true
+        }
+    ]
+}

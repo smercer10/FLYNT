@@ -1,0 +1,59 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build engine",
+            "windows": {
+                "command": "${workspaceFolder}/engine/build_engine.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/engine/build_engine.sh"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/engine/"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+        },
+        {
+            "type": "shell",
+            "label": "Build testbed",
+            "windows": {
+                "command": "${workspaceFolder}/testbed/build_testbed.bat"
+            },
+            "linux": {
+                "command": "${workspaceFolder}/testbed/build_testbed.sh"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/testbed/"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "Build all",
+            "windows": {
+                "command": "${workspaceFolder}/build_all.bat",
+            },
+            "linux": {
+                "command": "${workspaceFolder}/build_all.sh",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

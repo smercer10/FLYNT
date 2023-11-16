@@ -1,6 +1,11 @@
-:: Build script for testbed executable
+:: Windows build script for testbed executable
 @ECHO OFF
 SETLOCAL EnableDelayedExpansion
+
+:: Create bin directory if it doesn't exist
+IF NOT EXIST ../bin/ (
+    MKDIR ../bin/
+)
 
 :: Get list of source files
 SET source_files=
@@ -8,7 +13,7 @@ FOR /R %%f IN (*.c) DO (
     SET source_files=!source_files! %%f
 )
 
-:: Define build arguments
+:: Configure build options
 SET target_name=testbed
 SET compiler_flags=-g3
 SET include_flags=-Isrc -I../engine/src/

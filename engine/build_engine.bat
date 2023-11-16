@@ -1,6 +1,11 @@
-:: Build script for engine library
+:: Windows build script for engine library
 @ECHO OFF
 SETLOCAL EnableDelayedExpansion
+
+:: Create bin directory if it doesn't exist
+IF NOT EXIST ../bin/ (
+    MKDIR ../bin/
+)
 
 :: Get list of source files
 SET source_files=
@@ -8,7 +13,7 @@ FOR /R %%f IN (*.c) DO (
     SET source_files=!source_files! %%f
 )
 
-:: Define build arguments
+:: Configure build options
 SET target_name=engine
 SET compiler_flags=-g3 -shared -Wall -Wextra -Werror -Wvarargs
 SET include_flags=-Isrc -I%VULKAN_SDK%/Include

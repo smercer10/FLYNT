@@ -18,7 +18,7 @@ SET target_name=testbed
 SET compiler_flags=-g3
 SET include_flags=-Isrc/ -I../engine/src/
 SET linker_flags= -lengine.lib -L../bin/
-SET defines=-D_DEBUG -DFLYNT_IMPORT
+SET defines=-D_DEBUG -DF_IMPORT
 
 :: Run build
 ECHO "Building %target_name%..."

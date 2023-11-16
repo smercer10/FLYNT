@@ -2,4 +2,4 @@
 
 #include "defs.h"
 
-F_API void print_int(i32 i);
+FLYNT_API void print_int(i32 i);

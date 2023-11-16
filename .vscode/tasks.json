@@ -3,12 +3,7 @@
         {
             "type": "shell",
             "label": "Build engine",
-            "windows": {
-                "command": "${workspaceFolder}/engine/build_engine.bat"
-            },
-            "linux": {
-                "command": "${workspaceFolder}/engine/build_engine.sh"
-            },
+            "command": "${workspaceFolder}/engine/build_engine.bat",
             "options": {
                 "cwd": "${workspaceFolder}/engine/"
             },
@@ -20,12 +15,7 @@
         {
             "type": "shell",
             "label": "Build testbed",
-            "windows": {
-                "command": "${workspaceFolder}/testbed/build_testbed.bat"
-            },
-            "linux": {
-                "command": "${workspaceFolder}/testbed/build_testbed.sh"
-            },
+            "command": "${workspaceFolder}/testbed/build_testbed.bat",
             "options": {
                 "cwd": "${workspaceFolder}/testbed/"
             },
@@ -37,12 +27,7 @@
         {
             "type": "shell",
             "label": "Build all",
-            "windows": {
-                "command": "${workspaceFolder}/build_all.bat",
-            },
-            "linux": {
-                "command": "${workspaceFolder}/build_all.sh",
-            },
+            "command": "${workspaceFolder}/build_all.bat",
             "options": {
                 "cwd": "${workspaceFolder}/"
             },

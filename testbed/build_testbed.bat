@@ -13,12 +13,12 @@ FOR /R %%f IN (*.c) DO (
     SET source_files=!source_files! %%f
 )
 
-:: Configure build options
+:: Set build options
 SET target_name=testbed
 SET compiler_flags=-g3
-SET include_flags=-Isrc -I../engine/src/
-SET linker_flags=-L../bin/ -lengine.lib
-SET defines=-D_DEBUG -DF_IMPORT
+SET include_flags=-Isrc/ -I../engine/src/
+SET linker_flags= -lengine.lib -L../bin/
+SET defines=-D_DEBUG -DFLYNT_IMPORT
 
 :: Run build
 ECHO "Building %target_name%..."
